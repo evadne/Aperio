@@ -26,6 +26,7 @@
 		53A3041B15A7CD7C00019F3C /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A3041015A7CD7C00019F3C /* AFXMLRequestOperation.m */; };
 		53A3041C15A7CD7C00019F3C /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A3041215A7CD7C00019F3C /* UIImageView+AFNetworking.m */; };
 		53A3045815A7CEB500019F3C /* LBHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A3045715A7CEB500019F3C /* LBHTTPClient.m */; };
+		53A3045B15A7CF1D00019F3C /* LBCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A3045A15A7CF1D00019F3C /* LBCompany.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,8 @@
 		53A3041215A7CD7C00019F3C /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		53A3045615A7CEB500019F3C /* LBHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBHTTPClient.h; sourceTree = "<group>"; };
 		53A3045715A7CEB500019F3C /* LBHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBHTTPClient.m; sourceTree = "<group>"; };
+		53A3045915A7CF1D00019F3C /* LBCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBCompany.h; sourceTree = "<group>"; };
+		53A3045A15A7CF1D00019F3C /* LBCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBCompany.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				53A303E715A7CD1400019F3C /* Supporting Files */,
 				53A3045615A7CEB500019F3C /* LBHTTPClient.h */,
 				53A3045715A7CEB500019F3C /* LBHTTPClient.m */,
+				53A3045915A7CF1D00019F3C /* LBCompany.h */,
+				53A3045A15A7CF1D00019F3C /* LBCompany.m */,
 			);
 			path = Aperio;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 				53A3041B15A7CD7C00019F3C /* AFXMLRequestOperation.m in Sources */,
 				53A3041C15A7CD7C00019F3C /* UIImageView+AFNetworking.m in Sources */,
 				53A3045815A7CEB500019F3C /* LBHTTPClient.m in Sources */,
+				53A3045B15A7CF1D00019F3C /* LBCompany.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

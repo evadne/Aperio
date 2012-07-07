@@ -14,6 +14,10 @@
 
 @implementation LBViewController
 
+@synthesize companyTableView, companyData = _companyData;
+
+# pragma mark - View Loading Methods
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -30,5 +34,28 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+# pragma mark - Table View Data Source and Delegate Methods
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_companyData count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Create table view cell
+    UITableViewCell *cell = [companyTableView dequeueReusableCellWithIdentifier:@"CompanyCell"];
+    
+    if (cell == nil) 
+    {
+        // Construct New Table View Cell here
+    }
+    
+    // Fill in table view cell values here
+    
+    return cell;
+}
+
 
 @end

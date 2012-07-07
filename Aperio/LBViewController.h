@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LBViewController : UIViewController
+@interface LBViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+{
+    NSMutableArray *_companyData;
+}
+
+@property (nonatomic, strong) UITableView *companyTableView;
+
+@property (nonatomic, strong) NSMutableArray *companyData;
 
 @end

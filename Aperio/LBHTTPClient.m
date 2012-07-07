@@ -15,19 +15,24 @@
 
 // Singleton Methods
 
-static LBHTTPClient *sharedHTTPClient;
+//static LBHTTPClient *sharedHTTPClient;
 
 #pragma mark - Designated Intitializer
 
 - (id) initHTTPClient
 {
+    NSLog(@"calling super");
     self = [super initWithBaseURL:[NSURL URLWithString:kMarkitBaseURL]];
+    
+    NSLog(@"init running");
     
     if (self) 
     {
+        NSLog(@"self is legit");
         // Sub class specific initializations
     }
     
+    NSLog(@"about to return");
     return self;
 }
 
@@ -38,10 +43,10 @@ static LBHTTPClient *sharedHTTPClient;
     //static dispatch_once_t once;
     
     static dispatch_once_t once = 0;
-    __strong static id sharedHTTPClient = nil;
+    static LBHTTPClient *sharedHTTPClient = nil;
     
     dispatch_once(&once, ^{
-        sharedHTTPClient = [[self alloc] initHTTPClient];
+        sharedHTTPClient = [[LBHTTPClient alloc] initHTTPClient];
     });
     
     // NSLog(@"This memory address should never change: %@",(LBHTTPClient*) sharedHTTPClient.description);

@@ -22,14 +22,14 @@
 		53A303E015A7CD1400019F3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		53A303E215A7CD1400019F3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		53A303E415A7CD1400019F3C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		53A303E815A7CD1400019F3C /* Aperio-Info.plist */ = {isa = PBXFileReference; path = "Aperio-Info.plist"; sourceTree = "<group>"; };
+		53A303E815A7CD1400019F3C /* Aperio-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Aperio-Info.plist"; sourceTree = "<group>"; };
 		53A303EA15A7CD1400019F3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		53A303EC15A7CD1400019F3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		53A303EE15A7CD1400019F3C /* Aperio-Prefix.pch */ = {isa = PBXFileReference; path = "Aperio-Prefix.pch"; sourceTree = "<group>"; };
-		53A303EF15A7CD1400019F3C /* LBAppDelegate.h */ = {isa = PBXFileReference; path = LBAppDelegate.h; sourceTree = "<group>"; };
+		53A303EE15A7CD1400019F3C /* Aperio-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Aperio-Prefix.pch"; sourceTree = "<group>"; };
+		53A303EF15A7CD1400019F3C /* LBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBAppDelegate.h; sourceTree = "<group>"; };
 		53A303F015A7CD1400019F3C /* LBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBAppDelegate.m; sourceTree = "<group>"; };
 		53A303F315A7CD1400019F3C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		53A303F515A7CD1400019F3C /* LBViewController.h */ = {isa = PBXFileReference; path = LBViewController.h; sourceTree = "<group>"; };
+		53A303F515A7CD1400019F3C /* LBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBViewController.h; sourceTree = "<group>"; };
 		53A303F615A7CD1400019F3C /* LBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

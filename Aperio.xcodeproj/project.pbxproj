@@ -25,6 +25,7 @@
 		53A3041A15A7CD7C00019F3C /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A3040E15A7CD7C00019F3C /* AFURLConnectionOperation.m */; };
 		53A3041B15A7CD7C00019F3C /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A3041015A7CD7C00019F3C /* AFXMLRequestOperation.m */; };
 		53A3041C15A7CD7C00019F3C /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A3041215A7CD7C00019F3C /* UIImageView+AFNetworking.m */; };
+		53A3045815A7CEB500019F3C /* LBHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A3045715A7CEB500019F3C /* LBHTTPClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		53A3041015A7CD7C00019F3C /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		53A3041115A7CD7C00019F3C /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		53A3041215A7CD7C00019F3C /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		53A3045615A7CEB500019F3C /* LBHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBHTTPClient.h; sourceTree = "<group>"; };
+		53A3045715A7CEB500019F3C /* LBHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBHTTPClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				53A303F515A7CD1400019F3C /* LBViewController.h */,
 				53A303F615A7CD1400019F3C /* LBViewController.m */,
 				53A303E715A7CD1400019F3C /* Supporting Files */,
+				53A3045615A7CEB500019F3C /* LBHTTPClient.h */,
+				53A3045715A7CEB500019F3C /* LBHTTPClient.m */,
 			);
 			path = Aperio;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				53A3041A15A7CD7C00019F3C /* AFURLConnectionOperation.m in Sources */,
 				53A3041B15A7CD7C00019F3C /* AFXMLRequestOperation.m in Sources */,
 				53A3041C15A7CD7C00019F3C /* UIImageView+AFNetworking.m in Sources */,
+				53A3045815A7CEB500019F3C /* LBHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

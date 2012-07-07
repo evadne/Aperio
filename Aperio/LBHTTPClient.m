@@ -17,6 +17,7 @@
 
 static LBHTTPClient *sharedHTTPClient;
 
+#pragma mark - Designated Intitializer
 
 - (id) initHTTPClient
 {
@@ -29,6 +30,8 @@ static LBHTTPClient *sharedHTTPClient;
     
     return self;
 }
+
+#pragma mark - Singleton Methods
 
 + (LBHTTPClient*)sharedHTTPClient
 {
@@ -57,6 +60,8 @@ static LBHTTPClient *sharedHTTPClient;
 //{
 //    [JSONRequest start];
 //}
+
+#pragma mark - Markit API Methods
 
 - (void)getCompanyDataWithString:(NSString*)companySearchQuery finish:(LBMarkitAPIRequestCompletionBlock)finishBlock
 {

@@ -12,8 +12,8 @@
 
 @synthesize name = _name, symbol = _symbol, exchange = _exchange;
 
+# pragma mark - Designated Intitializer
 
-// Designated Initializer
 - (id)initWithName:(NSString*)aName Symbol:(NSString*)aSymbol Exchange:(NSString*)anExchange
 {
     self = [super init];

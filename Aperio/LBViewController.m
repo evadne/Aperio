@@ -7,6 +7,7 @@
 //
 
 #import "LBViewController.h"
+#import "LBHTTPClient.h"
 
 @interface LBViewController ()
 
@@ -57,5 +58,20 @@
     return cell;
 }
 
+# pragma mark - API Methods
+
+
+- (void)submitCompanyLookupQuery:(NSString*)lookupQuery
+{
+    // Encapsulate the HTTP client method for the time being
+    // Additional logic?
+    // @todo Error Handling Code
+    
+    [[LBHTTPClient sharedHTTPClient] getCompanyDataWithString:lookupQuery finish:^(NSMutableArray *results, NSError *error){
+        [self setCompanyData:results];
+        NSLog(@"The companies count is %d",self.companyData.count);
+    }];
+    
+}
 
 @end

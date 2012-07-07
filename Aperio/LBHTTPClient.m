@@ -33,20 +33,23 @@ static LBHTTPClient *sharedHTTPClient;
 
 #pragma mark - Singleton Methods
 
-+ (LBHTTPClient*)sharedHTTPClient
++ (LBHTTPClient*) sharedHTTPClient
 {
-    static dispatch_once_t once;
+    //static dispatch_once_t once;
+    
+    static dispatch_once_t once = 0;
+    __strong static id sharedHTTPClient = nil;
     
     dispatch_once(&once, ^{
         sharedHTTPClient = [[self alloc] initHTTPClient];
     });
     
-    NSLog(@"This memory address should never change: %@",sharedHTTPClient.description);
+    // NSLog(@"This memory address should never change: %@",(LBHTTPClient*) sharedHTTPClient.description);
     
     return sharedHTTPClient;
 }
 
-+ (id)allocWithZone:(NSZone *)zone 
++ (id) allocWithZone:(NSZone *)zone 
 {
     return [LBHTTPClient sharedHTTPClient];
 }
@@ -67,6 +70,8 @@ static LBHTTPClient *sharedHTTPClient;
 {
     NSURL *searchQueryURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kMarkitBaseURL,kMarkitCompanyURL]];
     NSURLRequest *searchQueryRequest = [NSURLRequest requestWithURL:searchQueryURL];
+    
+    NSLog(@"making URL request");
     
     AFJSONRequestOperation *searchQueryRequestOperation = [AFJSONRequestOperation 
                                                            JSONRequestOperationWithRequest:searchQueryRequest 
@@ -101,4 +106,5 @@ static LBHTTPClient *sharedHTTPClient;
     [searchQueryRequestOperation start];
     
 }
+
 @end

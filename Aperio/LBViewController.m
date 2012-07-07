@@ -15,7 +15,7 @@
 
 @implementation LBViewController
 
-@synthesize companyTableView, companyData = _companyData;
+@synthesize companyTableView = _companyTableView, companySearchBar = _companySearchBar, companyData = _companyData;
 
 # pragma mark - View Loading Methods
 
@@ -46,7 +46,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Create table view cell
-    UITableViewCell *cell = [companyTableView dequeueReusableCellWithIdentifier:@"CompanyCell"];
+    UITableViewCell *cell = [_companyTableView dequeueReusableCellWithIdentifier:@"CompanyCell"];
     
     if (cell == nil) 
     {
@@ -58,8 +58,21 @@
     return cell;
 }
 
-# pragma mark - API Methods
+# pragma mark - Search Bar Delegate Methods
 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSString *searchQuery = [searchBar text];
+    
+    [self submitCompanyLookupQuery:searchQuery];
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+
+}
+
+# pragma mark - API Methods
 
 - (void)submitCompanyLookupQuery:(NSString*)lookupQuery
 {
@@ -67,9 +80,12 @@
     // Additional logic?
     // @todo Error Handling Code
     
+    NSLog(@"searching for %@",lookupQuery);
+    
     [[LBHTTPClient sharedHTTPClient] getCompanyDataWithString:lookupQuery finish:^(NSMutableArray *results, NSError *error){
         [self setCompanyData:results];
         NSLog(@"The companies count is %d",self.companyData.count);
+        [self.companyTableView reloadData];
     }];
     
 }

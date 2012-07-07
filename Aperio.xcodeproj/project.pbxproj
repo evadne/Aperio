@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53A303E115A7CD1400019F3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A303E015A7CD1400019F3C /* UIKit.framework */; };
+		53A303E315A7CD1400019F3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A303E215A7CD1400019F3C /* Foundation.framework */; };
+		53A303E515A7CD1400019F3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A303E415A7CD1400019F3C /* CoreGraphics.framework */; };
+		53A303EB15A7CD1400019F3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53A303E915A7CD1400019F3C /* InfoPlist.strings */; };
+		53A303ED15A7CD1400019F3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A303EC15A7CD1400019F3C /* main.m */; };
+		53A303F115A7CD1400019F3C /* LBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A303F015A7CD1400019F3C /* LBAppDelegate.m */; };
+		53A303F415A7CD1400019F3C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A303F215A7CD1400019F3C /* MainStoryboard.storyboard */; };
+		53A303F715A7CD1400019F3C /* LBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A303F615A7CD1400019F3C /* LBViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		53A303DC15A7CD1400019F3C /* Aperio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aperio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53A303E015A7CD1400019F3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		53A303E215A7CD1400019F3C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		53A303E415A7CD1400019F3C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		53A303E815A7CD1400019F3C /* Aperio-Info.plist */ = {isa = PBXFileReference; path = "Aperio-Info.plist"; sourceTree = "<group>"; };
+		53A303EA15A7CD1400019F3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		53A303EC15A7CD1400019F3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53A303EE15A7CD1400019F3C /* Aperio-Prefix.pch */ = {isa = PBXFileReference; path = "Aperio-Prefix.pch"; sourceTree = "<group>"; };
+		53A303EF15A7CD1400019F3C /* LBAppDelegate.h */ = {isa = PBXFileReference; path = LBAppDelegate.h; sourceTree = "<group>"; };
+		53A303F015A7CD1400019F3C /* LBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBAppDelegate.m; sourceTree = "<group>"; };
+		53A303F315A7CD1400019F3C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		53A303F515A7CD1400019F3C /* LBViewController.h */ = {isa = PBXFileReference; path = LBViewController.h; sourceTree = "<group>"; };
+		53A303F615A7CD1400019F3C /* LBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53A303D915A7CD1400019F3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A303E115A7CD1400019F3C /* UIKit.framework in Frameworks */,
+				53A303E315A7CD1400019F3C /* Foundation.framework in Frameworks */,
+				53A303E515A7CD1400019F3C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53A303D115A7CD1300019F3C = {
+			isa = PBXGroup;
+			children = (
+				53A303E615A7CD1400019F3C /* Aperio */,
+				53A303DF15A7CD1400019F3C /* Frameworks */,
+				53A303DD15A7CD1400019F3C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		53A303DD15A7CD1400019F3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53A303DC15A7CD1400019F3C /* Aperio.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53A303DF15A7CD1400019F3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53A303E015A7CD1400019F3C /* UIKit.framework */,
+				53A303E215A7CD1400019F3C /* Foundation.framework */,
+				53A303E415A7CD1400019F3C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53A303E615A7CD1400019F3C /* Aperio */ = {
+			isa = PBXGroup;
+			children = (
+				53A303EF15A7CD1400019F3C /* LBAppDelegate.h */,
+				53A303F015A7CD1400019F3C /* LBAppDelegate.m */,
+				53A303F215A7CD1400019F3C /* MainStoryboard.storyboard */,
+				53A303F515A7CD1400019F3C /* LBViewController.h */,
+				53A303F615A7CD1400019F3C /* LBViewController.m */,
+				53A303E715A7CD1400019F3C /* Supporting Files */,
+			);
+			path = Aperio;
+			sourceTree = "<group>";
+		};
+		53A303E715A7CD1400019F3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				53A303E815A7CD1400019F3C /* Aperio-Info.plist */,
+				53A303E915A7CD1400019F3C /* InfoPlist.strings */,
+				53A303EC15A7CD1400019F3C /* main.m */,
+				53A303EE15A7CD1400019F3C /* Aperio-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53A303DB15A7CD1400019F3C /* Aperio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53A303FA15A7CD1400019F3C /* Build configuration list for PBXNativeTarget "Aperio" */;
+			buildPhases = (
+				53A303D815A7CD1400019F3C /* Sources */,
+				53A303D915A7CD1400019F3C /* Frameworks */,
+				53A303DA15A7CD1400019F3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aperio;
+			productName = Aperio;
+			productReference = 53A303DC15A7CD1400019F3C /* Aperio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53A303D315A7CD1300019F3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LB;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 53A303D615A7CD1300019F3C /* Build configuration list for PBXProject "Aperio" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 53A303D115A7CD1300019F3C;
+			productRefGroup = 53A303DD15A7CD1400019F3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53A303DB15A7CD1400019F3C /* Aperio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53A303DA15A7CD1400019F3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A303EB15A7CD1400019F3C /* InfoPlist.strings in Resources */,
+				53A303F415A7CD1400019F3C /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53A303D815A7CD1400019F3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A303ED15A7CD1400019F3C /* main.m in Sources */,
+				53A303F115A7CD1400019F3C /* LBAppDelegate.m in Sources */,
+				53A303F715A7CD1400019F3C /* LBViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		53A303E915A7CD1400019F3C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53A303EA15A7CD1400019F3C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		53A303F215A7CD1400019F3C /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53A303F315A7CD1400019F3C /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53A303F815A7CD1400019F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		53A303F915A7CD1400019F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		53A303FB15A7CD1400019F3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Aperio/Aperio-Prefix.pch";
+				INFOPLIST_FILE = "Aperio/Aperio-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		53A303FC15A7CD1400019F3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Aperio/Aperio-Prefix.pch";
+				INFOPLIST_FILE = "Aperio/Aperio-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53A303D615A7CD1300019F3C /* Build configuration list for PBXProject "Aperio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53A303F815A7CD1400019F3C /* Debug */,
+				53A303F915A7CD1400019F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53A303FA15A7CD1400019F3C /* Build configuration list for PBXNativeTarget "Aperio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53A303FB15A7CD1400019F3C /* Debug */,
+				53A303FC15A7CD1400019F3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53A303D315A7CD1300019F3C /* Project object */;
+}

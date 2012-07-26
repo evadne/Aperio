@@ -21,18 +21,13 @@
 
 - (id) initHTTPClient
 {
-    NSLog(@"calling super");
     self = [super initWithBaseURL:[NSURL URLWithString:kMarkitBaseURL]];
-    
-    NSLog(@"init running");
     
     if (self) 
     {
-        NSLog(@"self is legit");
         // Sub class specific initializations
     }
     
-    NSLog(@"about to return");
     return self;
 }
 
@@ -40,41 +35,34 @@
 
 + (LBHTTPClient*) sharedHTTPClient
 {
-    //static dispatch_once_t once;
-    
     static dispatch_once_t once = 0;
     static LBHTTPClient *sharedHTTPClient = nil;
-    
     dispatch_once(&once, ^{
         sharedHTTPClient = [[LBHTTPClient alloc] initHTTPClient];
     });
     
-    // NSLog(@"This memory address should never change: %@",(LBHTTPClient*) sharedHTTPClient.description);
+    NSLog(@"This memory address should never change: %@",(LBHTTPClient*) sharedHTTPClient.description);
     
     return sharedHTTPClient;
 }
-
-+ (id) allocWithZone:(NSZone *)zone 
-{
-    return [LBHTTPClient sharedHTTPClient];
-}
-
-// Request Construction
-
-//- (void)sendMarkitAPIRequest:(AFJSONRequestOperation*)JSONRequest onCompletion:(LBMarkitAPIRequestCompletionBlock)
-//    {
-//
-//    }
-//{
-//    [JSONRequest start];
-//}
 
 #pragma mark - Markit API Methods
 
 - (void)getCompanyDataWithString:(NSString*)companySearchQuery finish:(LBMarkitAPIRequestCompletionBlock)finishBlock
 {
+    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+    [self setParameterEncoding:AFJSONParameterEncoding];
     NSURL *searchQueryURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kMarkitBaseURL,kMarkitCompanyURL]];
-    NSURLRequest *searchQueryRequest = [NSURLRequest requestWithURL:searchQueryURL];
+    NSDictionary *params = [NSDictionary dictionaryWithObject:companySearchQuery forKey:@"input"];
+    
+    NSData *jsonData = [NSKeyedArchiver archivedDataWithRootObject:params];
+    id json = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:nil];
+    
+    NSMutableURLRequest *searchQueryRequest = [NSMutableURLRequest requestWithURL:searchQueryURL];
+    
+    [searchQueryRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [searchQueryRequest setHTTPBody:json];
+//    [searchQueryRequest set
     
     NSLog(@"making URL request");
     
@@ -107,9 +95,14 @@
                                                                
                                                                finishBlock(results,anError);
                                                            }
-                                                           failure:nil];
+                                                           failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
+                                                           {
+                                                               NSLog(@"request failed: %@",[error localizedDescription]);
+                                                               NSLog(@"Response: %@",response);
+                                                               NSLog(@"JSON: %@",JSON);
+                                                           }];
     [searchQueryRequestOperation start];
-    
+    NSLog(@"JSON operation started");
 }
 
 @end

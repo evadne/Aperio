@@ -4,7 +4,7 @@
 //
 
 #define kMarkitBaseURL @"http://dev.markitondemand.com/Api/"
-#define kMarkitCompanyURL @"Lookup"
+#define kMarkitCompanyURL @"Lookup/json"
 #define kMarkingStockQuoteURL @"Quote"
 
 #import "AFNetworking.h"
@@ -65,9 +65,9 @@
                                                                NSMutableArray *results = [NSMutableArray array];
                                                                
                                                                NSError *anError = [[NSError alloc] init];
-                                                               if ([json objectForKey:@"Message"]) 
+                                                               if ([json valueForKeyPath:@"Message"])
                                                                {
-                                                                   anError = [[NSError alloc] initWithDomain:[json objectForKey:@"Message"] 
+                                                                   anError = [[NSError alloc] initWithDomain:[json valueForKeyPath:@"Message"]
                                                                                                         code:100 
                                                                                                     userInfo:nil];
                                                                }

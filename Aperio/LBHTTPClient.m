@@ -52,18 +52,9 @@
 {
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
     [self setParameterEncoding:AFJSONParameterEncoding];
-    NSURL *searchQueryURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kMarkitBaseURL,kMarkitCompanyURL]];
+//    NSURL *searchQueryURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",kMarkitBaseURL,kMarkitCompanyURL]];
     NSDictionary *params = [NSDictionary dictionaryWithObject:companySearchQuery forKey:@"input"];
-    
-    NSData *jsonData = [NSKeyedArchiver archivedDataWithRootObject:params];
-    id json = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableLeaves error:nil];
-    
-    NSMutableURLRequest *searchQueryRequest = [NSMutableURLRequest requestWithURL:searchQueryURL];
-    
-    [searchQueryRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [searchQueryRequest setHTTPBody:json];
-//    [searchQueryRequest set
-    
+    NSMutableURLRequest *searchQueryRequest = [self requestWithMethod:@"GET" path:kMarkitCompanyURL parameters:params];
     NSLog(@"making URL request");
     
     AFJSONRequestOperation *searchQueryRequestOperation = [AFJSONRequestOperation 

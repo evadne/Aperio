@@ -8,6 +8,7 @@
 
 #import "LBViewController.h"
 #import "LBHTTPClient.h"
+#import "LBCompany.h"
 
 @interface LBViewController ()
 
@@ -45,16 +46,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Create table view cell
-    UITableViewCell *cell = [_companyTableView dequeueReusableCellWithIdentifier:@"CompanyCell"];
     
-    if (cell == nil) 
-    {
-        // Construct New Table View Cell here
+		static NSString * const reuseIdentifier = @"CompanyCell";
+		NSCParameterAssert(tableView == _companyTableView);
+		
+		UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    
+    if (!cell) {
+			cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
     }
     
-    // Fill in table view cell values here
-    
+		LBCompany *company = [_companyData objectAtIndex:indexPath.row];
+		
+		cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", company.name, company.symbol];
+		cell.detailTextLabel.text = company.exchange;
+		
     return cell;
 }
 
